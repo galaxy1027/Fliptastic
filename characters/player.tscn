@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://uaa5arfpglyy"]
+
+[ext_resource type="Script" path="res://characters/player.cs" id="1_2xcub"]
+[ext_resource type="Texture2D" uid="uid://bx45ye67w6wob" path="res://assets/kenney_pixel-platformer/Characters/character_0000.png" id="1_5aixc"]
+[ext_resource type="Texture2D" uid="uid://8m0rneo050yd" path="res://assets/kenney_pixel-platformer/Characters/character_0001.png" id="3_4duan"]
+[ext_resource type="AudioStream" uid="uid://34jallrxrwlh" path="res://assets/audio/boing.mp3" id="4_2nesg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yu4il"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5aixc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5aixc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4duan")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fioe2"]
+size = Vector2(22.2222, 28.75)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ohao"]
+radius = 8.0
+height = 21.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_2xcub")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5aixc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yu4il")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-07, 0.5)
+scale = Vector2(0.9, 0.8)
+shape = SubResource("RectangleShape2D_fioe2")
+
+[node name="HazardDetector" type="Area2D" parent="."]
+position = Vector2(-4.76837e-07, 0.5)
+scale = Vector2(0.9, 0.8)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector"]
+position = Vector2(5.29819e-07, 0)
+scale = Vector2(1.11111, 1.25)
+shape = SubResource("CapsuleShape2D_3ohao")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_2nesg")
+
+[connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]

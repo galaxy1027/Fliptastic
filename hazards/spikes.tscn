@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbkb0ckme70as"]
+
+[ext_resource type="Texture2D" uid="uid://fdhmax7nopek" path="res://assets/kenney_pixel-platformer/Tiles/tile_0068.png" id="1_vn87i"]
+[ext_resource type="PackedScene" uid="uid://dveb7g82mtcv" path="res://hazards/hazard_area.tscn" id="2_adyg1"]
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vn87i")
+
+[node name="HazardArea" parent="." instance=ExtResource("2_adyg1")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
+polygon = PackedVector2Array(-8, 9, -4, 2, 4, 2, 8, 9, 0, 9)
