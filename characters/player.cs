@@ -9,6 +9,7 @@ public partial class player : CharacterBody2D
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	private float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+	private bool gravityFlipped = false;
 	private bool hasDoubleJumped = false;
 	private Vector2 direction;
 	private Vector2 _startingPosition;
@@ -25,10 +26,10 @@ public partial class player : CharacterBody2D
 	{
 		Vector2 velocity = Velocity;
 
-		// Add the gravity.
-		if (!IsOnFloor())
+		// Add the gravity, update double jump status.
+		if (!IsOnFloor() || !IsOnCeiling())
 			velocity.Y += gravity * (float)delta;
-		else
+		if (IsOnFloor() || IsOnCeiling())
 			hasDoubleJumped = false;
 
 		// Handle Jump.
@@ -39,12 +40,28 @@ public partial class player : CharacterBody2D
 				velocity.Y = jumpVelocity;
 				GetNode<AudioStreamPlayer>("JumpSound").Play();
 			}
+			else if (IsOnCeiling())
+			{
+				velocity.Y = -jumpVelocity;
+				GetNode<AudioStreamPlayer>("JumpSound").Play();
+			}
 			else if (!hasDoubleJumped)
 			{
-				velocity.Y = doubleJumpVelocity;
+				if (!gravityFlipped)
+					velocity.Y += doubleJumpVelocity;
+				else
+					velocity.Y += -doubleJumpVelocity;
 				hasDoubleJumped = true;
 				GetNode<AudioStreamPlayer>("JumpSound").Play();
 			}
+			
+		}
+
+		//Handle gravity flip
+		if (Input.IsActionJustPressed("gravity"))
+		{
+			gravity *= -1;
+			gravityFlipped = !gravityFlipped;
 		}
 
 		// Get the input direction and handle the movement/deceleration.
@@ -79,6 +96,10 @@ public partial class player : CharacterBody2D
 			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = true;
 		if (direction.X < 0)
 			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipH = false;
+		if (gravityFlipped)
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipV = true;
+		else
+			GetNode<AnimatedSprite2D>("AnimatedSprite2D").FlipV = false;
 	}
 	private void _on_hazard_detector_area_entered(Area2D area)
 	{
