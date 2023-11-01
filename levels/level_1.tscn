@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cctu3vtk1krub"]
+[gd_scene load_steps=9 format=3 uid="uid://cctu3vtk1krub"]
 
 [ext_resource type="Texture2D" uid="uid://dlxxa8gr236p5" path="res://assets/kenney_pixel-platformer/Tilemap/tiles_packed.png" id="1_pp1up"]
 [ext_resource type="PackedScene" uid="uid://uaa5arfpglyy" path="res://characters/player.tscn" id="2_ipf1h"]
 [ext_resource type="PackedScene" uid="uid://dbkb0ckme70as" path="res://hazards/spikes.tscn" id="3_p6qxf"]
 [ext_resource type="PackedScene" uid="uid://c56fdjsekf5ms" path="res://music/BGmusic.tscn" id="4_dnmuw"]
+[ext_resource type="Script" path="res://levels/Control.gd" id="5_q4242"]
+[ext_resource type="Script" path="res://levels/LivesLabel.gd" id="8_mc1xe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cetyp"]
 texture = ExtResource("1_pp1up")
@@ -644,3 +646,15 @@ position = Vector2(961, 243)
 
 [node name="Spikes8" parent="." instance=ExtResource("3_p6qxf")]
 position = Vector2(855, 243)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_q4242")
+
+[node name="LivesLabel" type="Label" parent="Control"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("8_mc1xe")

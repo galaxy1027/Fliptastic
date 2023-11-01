@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "NY57rUb8Jt4yK7aZGIxOjhoBMaPDg+dd/wY8Oe/tStK/8pD4givPssLcHe/PgIBTYiJanKyLi9OroKCWmFv3VA==",
+  "success": true,
+  "projectFilePath": "C:\\Code\\GameJam Fall 2023\\repo\\WWU-Fall-Game-Jam\\Platformer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\speci\\.nuget\\packages\\godot.sourcegenerators\\4.1.2\\godot.sourcegenerators.4.1.2.nupkg.sha512",
+    "C:\\Users\\speci\\.nuget\\packages\\godotsharp\\4.1.2\\godotsharp.4.1.2.nupkg.sha512",
+    "C:\\Users\\speci\\.nuget\\packages\\godotsharpeditor\\4.1.2\\godotsharpeditor.4.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

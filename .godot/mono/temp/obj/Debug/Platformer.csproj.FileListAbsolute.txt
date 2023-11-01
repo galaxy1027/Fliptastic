@@ -1,0 +1,17 @@
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\bin\Debug\Platformer.deps.json
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\bin\Debug\Platformer.runtimeconfig.json
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\bin\Debug\Platformer.dll
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\bin\Debug\Platformer.pdb
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.csproj.AssemblyReference.cache
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.AssemblyInfoInputs.cache
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.AssemblyInfo.cs
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.csproj.CoreCompileInputs.cache
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.csproj.CopyComplete
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.dll
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\refint\Platformer.dll
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.pdb
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\Platformer.genruntimeconfig.cache
+C:\Code\GameJam Fall 2023\repo\WWU-Fall-Game-Jam\.godot\mono\temp\obj\Debug\ref\Platformer.dll

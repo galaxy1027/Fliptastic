@@ -1,0 +1,6 @@
+res://levels/level_1.tscn
+res://characters/player.cs
+res://hazards/hazard_area.tscn
+res://levels/Lives.gd
+res://levels/Control.gd
+res://levels/LivesLabel.gd
