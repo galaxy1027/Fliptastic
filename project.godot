@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Platformer"
+config/name="Fliptastic"
 run/main_scene="res://levels/level_1.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/kenney_pixel-platformer/Characters/character_0000.png"
 
 [display]
 
